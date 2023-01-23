@@ -17,17 +17,17 @@ namespace TicTacToe
 
             string gameWinner = "";
 
-            support sup = new support();
+            //support sup = new support();
 
             Console.WriteLine("Welcome to Tic-Tac-Toe 2.0!");
 
-            while (!winner && count < gameBoard.Length)
+            while (!winner && count <= gameBoard.Length)
             {
                 int playerChoice = 0;
 
                 char token = 'X';
 
-                sup.printBoard(gameBoard);
+                //sup.printBoard(gameBoard);
 
                 if (count % 2 == 0)
                 {
@@ -52,37 +52,31 @@ namespace TicTacToe
                 gameBoard[playerChoice - 1] = token;
                 count += 1;
 
-                if (sup.winner(gameBoard)[0] == 1)
-                {
-                    winner = true;
+                //if (sup.winner(gameBoard)[0] == 1)
+                //{
+                //    winner = true;
 
-                    if (sup.winner(gameBoard[1] == 1){
-                        gameWinner = "Player 1";
-                    }
+                //    if (sup.winner(gameBoard[1] == 1){
+                //        gameWinner = "Player 1";
+                //    }
 
-                    else
-                    {
-                        gameWinner = "Player 2";
-                    }
+                //    else
+                //    {
+                //        gameWinner = "Player 2";
+                //    }
 
-                    Console.WriteLine(gameWinner + " wins!");
-                }
+                //    Console.WriteLine(gameWinner + " wins!");
+                //}
 
-                if (!winner)
-                {
-                    Console.WriteLine("It's a draw!");
-                }
+
 
 
             }
 
-            
-
-
-
-            
-
-
+            if (!winner)
+            {
+                Console.WriteLine("It's a draw!");
+            }
 
         }
     }
