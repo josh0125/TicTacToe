@@ -22,12 +22,7 @@ namespace TicTacToe
             support sup = new support();
 
             Console.WriteLine("Welcome to Tic-Tac-Toe 2.0!");
-            support sup = new support();
-            char[] array = {'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x' };
-            sup.printBoard(array);
-            Console.ReadLine();
-
-
+            
             while (!winner && count <= gameBoard.Length)
             {
                 int playerChoice;
