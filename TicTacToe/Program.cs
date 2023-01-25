@@ -1,4 +1,6 @@
-﻿using System;
+﻿//IS 413 Section 4 Mission 3; Mitch Anderson, Joshua Allen, Andrew Alley, Jon Stauffer
+
+using System;
 
 namespace TicTacToe
 {
@@ -13,14 +15,15 @@ namespace TicTacToe
 
             int count = 1; //keeps track of number of times the loop executes
 
-            string currentPlayer;
+
+            string currentPlayer; 
 
             string gameWinner;
 
             support sup = new support();
 
             Console.WriteLine("Welcome to Tic-Tac-Toe 2.0!");
-
+            
             while (!winner && count <= gameBoard.Length)
             {
                 int playerChoice;
@@ -76,7 +79,6 @@ namespace TicTacToe
                 }
 
             }
-
             if (!winner) //execute when count exceeds board length without a winner
             {
                 Console.WriteLine();
