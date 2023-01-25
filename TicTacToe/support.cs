@@ -8,10 +8,12 @@ namespace TicTacToe
 {
     class support
     {
+        // function for printing the boarad
         public void printBoard(char[] board)
         {
+            // array to test where to place pipe
             int[] test = { 0, 1, 3, 4, 6, 7 };
-
+            // loop through passed board array to print
             for (int i = 0; i < board.Length; ++i)
             {
                 Console.Write(board[i]);
@@ -30,13 +32,17 @@ namespace TicTacToe
             Console.WriteLine("");
             Console.WriteLine("");
         }
+        // check to see if winner
         public int[] winner(char[] board)
         {
+            // array with 2 elements to say if there was a winner and who
             int[] decision = { 0, 0 };
+            //empty till winner declared
             char finalWinner = ' ';
-            
+            //if for each of 8 possible win combinations
             if ((board[0] == board[1]) && (board[1] == board[2]))
             {
+                //set the winner
                 finalWinner = board[0];
             }
             else if ((board[3] == board[4]) && (board[4] == board[5]))
@@ -69,7 +75,7 @@ namespace TicTacToe
             }
 
 
-
+            // pass the winner into the array and say there was a winner
             if (finalWinner == 'X')
             {
                 decision[0] = 1;
@@ -80,6 +86,7 @@ namespace TicTacToe
                 decision[0] = 1;
                 decision[1] = 2;
             }
+            //return decision of method
             return (decision);
         } 
     }
