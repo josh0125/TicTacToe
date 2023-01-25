@@ -15,6 +15,7 @@ namespace TicTacToe
 
             int count = 1; //keeps track of number of times the loop executes
 
+
             string currentPlayer; 
 
             string gameWinner;
@@ -78,7 +79,6 @@ namespace TicTacToe
                 }
 
             }
-
             if (!winner) //execute when count exceeds board length without a winner
             {
                 Console.WriteLine();
